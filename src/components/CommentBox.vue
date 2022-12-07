@@ -1,7 +1,7 @@
 <template>
     <section style="background-color: #e6ccff;">
-      <div class="mt-5">
-        <h1>Comments</h1>
+      <div class="mt-5" style="padding-left: 10px;">
+        <h1 style="font-size:20px ;">Comments</h1>
         <form >
             <input id="Name" type="text" v-model="name" placeholder="User name" maxlength="25">
             <input class="comment" id="Comment" type="text" v-model="comment" placeholder="Comment" maxlength="500">
@@ -15,9 +15,9 @@
           <div class="card-body p-4">
             <h4 class="mb-0">Recent comments</h4>
             <p class="fw-light mb-4 pb-2">Latest Comments section by users</p>
-            <div class="d-flex flex-start" v-for="item of comments">
-              <div v-if="item.idMeal==$route.params.id">
-                <h6 class="fw-bold mb-1">{{item.name}}</h6>
+            <div class="d-flex flex-start" v-for="item of comments" style="padding-top: 5px;">
+              <div v-if="item.idMeal==$route.params.id" style="background-color: white; padding-left: 5px;" >
+                <h6 class="fw-bold mb-1" style="font-size:25px;">{{item.name}}</h6>
                 <div class="d-flex align-items-center mb-3">
                   <p class="mb-0">
                     {{item.date}}
